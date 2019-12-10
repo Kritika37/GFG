@@ -10,7 +10,7 @@ node* reverselist(node* head){
 		current = temp;
 
 	}
-	return Node* prev;
+	return  prev;
 
 
 }
