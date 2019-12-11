@@ -1,18 +1,19 @@
 bool isPalindrome(Node *head){
 	Node* temp = head;
-	long long c=0;
+	int c=0;
 	while(temp!=NULL){
 		c++;
 		temp=temp->next;
 	}
-		long long arr[c];
-		for(long long i=0;i<c;i++){
+	temp = head;
+	int arr[c];
+		for(int i=0;i<c;i++){
 			arr[i]=temp->data;
 			temp=temp->next;
 		}
 		
 		int i=0;
-		int j=c;
+		int j=c-1;
 		bool flag=true;
 		while(i<=j){
 			if(arr[i]!=arr[j]){
@@ -20,11 +21,7 @@ bool isPalindrome(Node *head){
 				break;
 				
 			}
-			else
-			{
-				i++;
-				j--;
-			}
+			i++; j--;
 		}
 		return flag;
 	}
