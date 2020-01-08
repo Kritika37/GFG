@@ -32,10 +32,13 @@ int main(){
 	while(t--){
 	int n;
 	cin>>n;
-	Activity arr[n];
-	for(int i=0;i<n;i++) cin>>arr[i].s;
-	for(int i=0;i<n;i++) cin>>arr[i].f;
-
-	cout<<activitysel(arr,n)<<endl; 
+	Activity a[n];
+	for(int i=0;i<n;i++) {
+		cin>>a[i].s;
+	}
+	for(int i=0;i<n;i++) 
+		{ cin>>a[i].f;
+		}
+			cout<<activitysel(a,n)<<endl; 
 }
 }
