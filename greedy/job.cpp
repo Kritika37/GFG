@@ -22,6 +22,24 @@ int main(){
             cin>>arr[i].gain;
 		}
 		sort(arr,arr+n,compare);
-		
-	}
+		bool slot[n];
+        int max=0,c=0;
+        for (int i=0; i<n; i++) 
+             slot[i] = false; 
+         
+    	for (int i=0; i<n; i++) {
+        for (int j=min(n, arr[i].deadline)-1; j>=0; j--) 
+       { 
+          if (slot[j]==false) 
+          { 
+             c++;
+             max=arr[i].gain+max;
+             slot[j] = true; 
+             break; 
+          } 
+       } 
+    }
+	        cout << c<<" "<< max<<endl;
+    }
+	return 0;
 }
