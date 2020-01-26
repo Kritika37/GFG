@@ -17,7 +17,7 @@ void connect(Node* p){
 
 			if(temp->right != nullptr)
 				q.push(temp->right);
-				if(prev!=NULL)
+				if(prev!= nullptr)
 				prev->nextRight=temp;
 
 				prev=temp;
