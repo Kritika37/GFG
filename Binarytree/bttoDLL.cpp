@@ -21,5 +21,5 @@ helper(root->right,head_ref,prev);
 void bToDLL(Node *root, Node **head_ref)
 {  if(root == nullptr) return;
     Node* prev = nullptr;
-   helper(root,head_ref,&prev);
+   helper(root,head_ref,&prev); 
 }
